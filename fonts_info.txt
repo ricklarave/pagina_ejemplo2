@@ -1,9 +1,0 @@
-vList of Fonts used in template 
-
-
-
-Contrail One		http://www.google.com/fonts/specimen/Contrail+One
-Font Awesome		http://fortawesome.github.io/Font-Awesome
-Leckerli One		http://www.google.com/fonts/specimen/Leckerli+One
-Open Sans		http://www.google.com/fonts/specimen/Open+Sans
-Quattrocento Sans	http://www.google.com/fonts/specimen/Quattrocento+Sans
