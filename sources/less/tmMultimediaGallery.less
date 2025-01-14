@@ -1,0 +1,283 @@
+/*---------gallery bg--------*/
+body.galleryOpen{
+    /*overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .size(100%,100%);*/
+}
+#gallery-full{
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important; 
+}
+.closeIcon1{
+    position: absolute;
+    top: 65px;
+    right: 94px;
+    cursor: pointer;
+    .square(37px);
+    overflow: hidden;
+    z-index: 999 !important;
+    .transition(all 0.2s ease-out);
+        &.closeIconGallery{
+        background: url(../img/close_icon.jpg) 0 0 no-repeat;
+        }
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        .size(100%,100%);
+        .transition(all 0.2s ease-out);
+        background: url(../img/close_icon.jpg) 0 bottom no-repeat;
+        .opacity(0);
+    }
+    &:hover{
+        &:after{
+            .opacity(1);
+        }
+        text-decoration: none;
+    }
+}
+.galleryContainer{
+    background-color: #000;
+    z-index: 900 !important;
+    position: relative;
+    padding: 0 !important;
+    .perspective(1000px);
+    &.showGallery{
+        height: 100%;
+    }
+    &.animationDisable{
+        .transition(all 0s) !important;
+        *{
+            .transition(all 0s) !important;
+        }
+    }
+}
+#galleryHolder {
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0 !important;
+    .preserve-3d();
+    .transform-origin(right center);
+}
+#imageHolder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    cursor: default;
+    .transition(all 1.2s ease-in-out);
+    .frontImg, .backImg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        overflow: hidden;
+        .transition(all 1.2s ease-in-out);
+    }
+    .frontImg, .backImg{
+        z-index: 2;
+        // .rotateY(0deg);
+        .scale(1);
+
+    }
+    .backImg{
+        // .rotateY(-180deg);
+        .opacity(0);
+        .scale(2);
+    }
+    &.scale{
+        //.scale(0.8);
+    }
+    &.flip{
+        //.transition(all 1.2s ease-in-out);
+        // .rotateY(180deg);
+        .frontImg{
+            .opacity(0);
+            .scale(2.0);
+        }
+        .backImg{
+            .opacity(100);
+            // .rotateY(-180deg);
+            .scale(1.0)
+        }
+    }
+    &.animationDisable{
+        .transition(all 0) !important;
+        .frontImg, .backImg{
+            .transition(all 0) !important;
+        }
+    }
+    &.ie9{
+        .scale(1) !important; 
+    }
+}
+.animation{
+    .transition(all 0.7s ease-in-out);
+}
+#inner{
+    display: none !important;
+}
+#prevButton, #nextButton{
+    position: absolute;
+    left: 94px;
+    bottom: 50%;
+    z-index: 999;
+    background: url(../img/arr_next.jpg) 0 bottom no-repeat;
+    .size(37px,37px);
+    z-index: 200;
+    .transition(all 0.2s ease-out);  
+    >span{
+        position: absolute;
+        display: block;
+        .size(100%,100%);
+        .transition(all 0.4s ease-out); 
+        .opacity(0); 
+        
+    }      
+    &:hover{  
+        text-decoration: none;
+    }
+    &.showButton{
+        margin-top: -40px;
+    }
+}
+#prevButton{
+     background: url(../img/arr_prev.jpg) 0 bottom no-repeat;
+    >span{
+        background: url(../img/arr_prev.jpg) 0 0 no-repeat;
+    }
+    &:hover{       
+        >span{
+            .opacity(1); 
+        }
+    }
+}
+#nextButton{
+    right: 94px;
+    left: auto;
+    >span{
+        background: url(../img/arr_next.jpg) 0 0 no-repeat;
+    }
+    &:hover{   
+        >span{
+            .opacity(1); 
+        }
+    }
+}
+#imgSpinner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+    .opacity(0);
+    z-index: 9999;
+    .transition(all 1s ease-in-out);
+    .square(60px);
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        .size(100%,100%);
+        border-radius: 500px;
+        background: @black url(../img/ajax-loader.gif) 50% 50% no-repeat;
+    }
+    &.spinnerShow{
+        .opacity(1);
+    }
+}
+
+#galleryDescription{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-height: 114px;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    z-index: 3;
+    background: rgba(0,0,0,0.75);   
+    display: none !important;
+    li{ 
+        left: 175px;
+        right: 200px;
+        position: absolute;
+        .size(auto,100%);
+        bottom: -200px;
+        .box-sizing(border-box);
+        .transition(all 0.5s ease-in-out);
+        &.active{
+            display: block;
+            bottom: 0;
+            transition-delay: 2.2s;
+        }     
+        p{
+            color: #fff;
+            text-align: left;
+            color: white;
+            font: 400 18px/22px @custom-font-2;
+            margin: 33px 76px 0;
+        }
+    }
+}
+
+
+#galleryHolder img {
+    width: 0;
+    height: 0;    
+}
+
+.fullscr-btn {
+    display: block;
+    position: absolute;
+    .size(28px,27px);
+    bottom: 70px;
+    right: 90px;
+    z-index: 999;
+    .transition(all 0.5s ease-in-out);
+
+    &:hover{
+        .opacity(0.5);
+        .scale(1.1);
+    }
+
+    .ic1{
+        position: absolute;
+        display: block;
+        .square(100%);
+        top: 0;
+        left: 0;
+         background: url(../img/full_scr_icon.png) 0 bottom no-repeat;
+    }
+
+    .ic2{
+        position: absolute;
+        display: none;
+        .square(100%);
+        top: 0;
+        left: 0;
+        background: url(../img/full_scr_icon.png) 0 0 no-repeat;
+    }
+
+    &:hover {
+       
+    }
+}
+
+/*Core variables and mixins*/
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.less";
+@import "tmMixins.less";

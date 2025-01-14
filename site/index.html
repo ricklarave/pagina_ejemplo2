@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Wasabi - Restaurante de Sushi</title>
+
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Disfruta de la mejor experiencia gastronómica con nuestros deliciosos platos de sushi.">
+    <meta name="keywords" content="sushi, restaurante, comida japonesa, Wasabi">
+    <meta name="author" content="Wasabi Restaurante">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/photoswipe.css">
+	<link rel="stylesheet" href="css/galleryPrototype5.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script type="text/javascript" src="js/jquery.js"></script>	
+	<script type="text/javascript" src="js/device.js"></script>	
+	<script type="text/javascript" src="js/bootstrap.js"></script>	
+	<script type="text/javascript" src="js/core.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>	
+
+	<!--[if lt IE 9]>
+        <div style='text-align:center'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="Estás usando un navegador obsoleto. Para una experiencia de navegación más rápida y segura, actualiza gratis hoy." /></a></div>
+        <div style='text-align:center; z-index:999; position:relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="Estás usando un navegador obsoleto. Para una experiencia de navegación más rápida y segura, actualiza gratis hoy." /></a></div>  
+        <script src="js/html5shiv.js"></script>  
+    <![endif]-->
+</head>
+<body>
+<div id="webSiteLoader"><span></span></div>
+<div id="glob-wrap">
+	<div class="bgCover"></div>
+	<div class="leftPanel">
+		<header>
+			<div class="container">
+				<div class="row">
+					<!--logo y nombre de la empresa-->  
+					<h1><a href="./"><img src="img/logo.png" alt="Logo de Wasabi"></a></h1>
+					<!--menú-->   
+					<nav id="mainNav" data-follow="location" data-type="navigation">
+						<ul>
+							<li>
+								<div class="menuPic"><div><img src="img/menu_pic1.jpg" alt="Imagen de Sobre Nosotros"></div></div>
+								<a href="./aboutPage.html">
+									<div class="num">01.</div>
+									<span class="name">Sobre Nosotros</span>
+									<div class="extra"></div>
+									<div class="overHolder">
+										<div class="plane1"></div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<div class="menuPic"><div><img src="img/menu_pic2.jpg" alt="Imagen del Menú"></div></div>
+								<a href="./menuPage.html">
+									<div class="num">02.</div>
+									<span class="name">Menú</span>
+									<div class="extra"></div>
+									<div class="overHolder">
+										<div class="plane1"></div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<div class="menuPic"><div><img src="img/menu_pic3.jpg" alt="Imagen de la Galería"></div></div>
+								<a href="./galleryPage">
+									<div class="num">03.</div>
+									<span class="name">Galería</span>
+									<div class="extra"></div>
+									<div class="overHolder">
+										<div class="plane1"></div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<div class="menuPic"><div><img src="img/menu_pic4.jpg" alt="Imagen de Ofertas"></div></div>
+								<a href="./offersPage.html">
+									<div class="num">04.</div>
+									<span class="name">Ofertas</span>
+									<div class="extra"></div>
+									<div class="overHolder">
+										<div class="plane1"></div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<div class="menuPic"><div><img src="img/menu_pic5.jpg" alt="Imagen de Ubicación"></div></div>
+								<a href="./contactsPage.html">
+									<div class="num">05.</div>
+									<span class="name">Ubicación</span>
+									<div class="extra"></div>
+									<div class="overHolder">
+										<div class="plane1"></div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</nav> 
+				</div>  
+			</div>
+		</header>
+		<footer class="footer_1">
+			<div class="container">
+				<div class="social_ic">
+					<ul class="followList">
+						<li><a href="./" class="fa fa-facebook"></a></li>
+						<li><a href="./" class="fa fa-google-plus"></a></li>
+						<li><a href="./" class="fa fa-rss"></a></li>
+						<li><a href="./" class="fa fa-pinterest"></a></li>
+						<li><a href="./" class="fa fa-linkedin"></a></li>
+					</ul>
+				</div>
+				<div class="copyright">&copy; <span id="year"></span> &bull; <a href="./privacyPage.html">Política de Privacidad</a><br><!-- {%FOOTER_LINK} --></div>
+			</div>
+		</footer>
+	</div>
+	
+	<div class="galleryHolder">
+		<div id="galleryPrototype5" class="disableResize"></div>
+	</div>
+	
+	<div id="content_pages" data-follow="location" data-type="switcher" data-flags="ajax"></div>
+
+	<!-- páginas de categoría --> 
+	<div id="category_pages" data-follow="location" data-type="switcher">
+		<div data-id="galleryPage" data-source="./galleryPage.html"></div>
+		<div data-id="hairdressing" data-source="./gallery-hairdressing.html"></div>
+		<div data-id="nailcare" data-source="./gallery-nailcare.html"></div>
+		<div data-id="makeup" data-source="./gallery-makeup.html"></div>
+	</div>
+	<footer class="footer_2">
+		<div class="container">
+			<div class="social_ic">
+				<ul class="followList">
+					<li><a href="./" class="fa fa-facebook"></a></li>
+					<li><a href="./" class="fa fa-google-plus"></a></li>
+					<li><a href="./" class="fa fa-rss"></a></li>
+					<li><a href="./" class="fa fa-pinterest"></a></li>
+					<li><a href="./" class="fa fa-linkedin"></a></li>
+				</ul>
+			</div>
+			<div class="copyright">&copy; <span id="year"></span> &bull; <a href="./privacyPage.html">Política de Privacidad</a><br><!-- {%FOOTER_LINK} --></div>
+		</div>
+	</footer>
+
+</div>
+
+</body>
+</html>

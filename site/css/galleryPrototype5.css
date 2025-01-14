@@ -1,0 +1,165 @@
+#galleryPrototype5{
+    position: relative;
+    /*width: 1170px;*/
+    width: 770px;
+    margin: 0 auto;
+    left: 0px;
+}
+.navigHolder{
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    height: 37px;
+    width: 100%;
+    z-index: 500;
+    text-align: center;
+}
+.prevButton{
+    position: relative;
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    background: url(../img/arr_prev1.jpg) 0 bottom no-repeat;
+    cursor: pointer;
+}
+.prevButton span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../img/arr_prev1.jpg) 0 0 no-repeat;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 0.5s ease-in;
+     transition: all 0.5s ease-in;
+}
+.prevButton:hover span{
+    opacity: 1;
+    filter: alpha(opacity=1);
+}
+.nextButton{
+    position: relative;
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    background: url(../img/arr_next1.jpg) 0 bottom no-repeat;
+    cursor: pointer;
+}
+.nextButton span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../img/arr_next1.jpg) 0 0 no-repeat;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 0.5s ease-in;
+     transition: all 0.5s ease-in;
+}
+.nextButton:hover span{
+    opacity: 1;
+    filter: alpha(opacity=1);
+}
+#galleryPrototype5 #mainHolder{
+    position: relative;
+    display: block;
+    /*float: left;
+    width: 192px;*/
+    width: 100%;
+    height: 100%;
+    margin-right: 8px;
+}
+#galleryPrototype5 #mainHolder .title{
+    width: 170px;
+    height: 53px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #fff;
+    display: none;
+}
+#galleryPrototype5 #mainHolder .controlHolder{
+    /*width: 175px;*/
+    display: block;
+    position: relative;
+    display: none;
+}
+#galleryPrototype5 .closeItem{
+    display: block;
+    position: absolute;
+}
+
+#fullPreviewHolder{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 770px;
+    height: 549px;
+   /* float: left;*/
+}
+#fullPreviewHolder .primaryFullImage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+#fullPreviewHolder .primaryFullImage img{
+    position: relative;
+}
+#fullPreviewHolder .secondaryFullImage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#fullPreviewHolder .secondaryFullImage img{
+    position: relative;
+}
+#fullPreviewHolder .fullPreviewLoader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+#mainPagination{
+    padding: 10px 0 0;
+}
+#mainPagination > ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+#mainPagination > ul > li{
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 0 6px 6px 0;
+    cursor: pointer;
+}
+.full_link{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 500;
+}
+.full_link a{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url(../img/zoom_icon.png) 50% 50% no-repeat;
+}
+
+
